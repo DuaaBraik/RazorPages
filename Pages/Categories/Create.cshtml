@@ -1,0 +1,39 @@
+﻿@page
+@model ProjectWithRazorPages.Pages.Categories.CreateModel
+@{
+}
+<h2>Create a new category</h2>
+
+<form method="post">
+    <table>
+        <tr>
+            <td>
+                Name: 
+            </td>
+            <td>
+                <input asp-for="Category.Name" type="text" />
+            </td>
+        </tr>
+        <br />
+        <tr>
+            <td><span asp-validation-for="Category.Name" class="text-danger"></span></td>
+        </tr>
+        <tr>
+            <td>
+                Display Order: 
+            </td>
+            <td>
+                <input asp-for="Category.DisplayOrder" type="text"/>
+            </td>
+        </tr>
+        <br />
+        <tr>
+            <td><span asp-validation-for="Category.DisplayOrder" class="text-danger"></span></td>
+        </tr>
+        <button>Create</button>
+    </table>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"/>
+}

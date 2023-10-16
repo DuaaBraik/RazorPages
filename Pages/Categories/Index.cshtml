@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Categories";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to display your categroies.</p>
+
+<ul>
+    @foreach(var category in Model.Categories)
+    {
+        <li>@category.Name, @category.DisplayOrder</li>
+    }
+</ul>
+<br />
+<a asp-page="Create">Create a new category</a>
+
